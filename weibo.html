@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荆州众志足球俱乐部 - 官方微博</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 微博样式 -->
+    <style>
+        .weibo-header {
+            background-color: #e6162d;
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .weibo-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .weibo-card {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .weibo-card:hover {
+            transform: translateY(-5px);
+        }
+        .weibo-feature-icon {
+            font-size: 2rem;
+            color: #e6162d;
+            margin-bottom: 1rem;
+        }
+        .weibo-qr-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .weibo-news-card {
+            border-left: 4px solid #e6162d;
+        }
+        .weibo-btn {
+            background-color: #e6162d;
+            border-color: #e6162d;
+            color: white;
+        }
+        .weibo-btn:hover {
+            background-color: #c91629;
+            border-color: #c91629;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="首页.html">
+                <i class="fas fa-futbol"></i> 荆州众志足球俱乐部
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="首页.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="俱乐部介绍.html">俱乐部介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="赛事新闻.html">赛事新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="球员风采.html">球员风采</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fan-interaction.html">球迷互动</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">联系我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登录/注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 微博头部 -->
+    <header class="weibo-header">
+        <div class="container text-center">
+            <i class="fab fa-weibo weibo-icon"></i>
+            <h1>荆州众志足球俱乐部官方微博</h1>
+            <p class="lead">关注我们，获取最新赛事动态、球员风采和俱乐部活动信息</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 微博简介 -->
+        <section class="mb-8">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="weibo-card p-6">
+                        <h2 class="mb-4">关于我们的微博</h2>
+                        <p class="mb-4">荆州众志足球俱乐部官方微博是俱乐部与球迷互动的重要平台，我们在这里分享最新的赛事信息、球员动态、训练花絮以及俱乐部活动。通过微博，您可以第一时间了解俱乐部的最新动态，参与线上互动活动，与其他球迷交流分享。</p>
+                        <p>我们的微博团队由专业的媒体人员组成，致力于为球迷提供最及时、最全面、最生动的俱乐部资讯。无论是比赛日还是非比赛日，我们都会不定期更新微博内容，让您随时随地了解俱乐部的最新情况。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="weibo-qr-container">
+                        <h3 class="mb-3">扫码关注</h3>
+                        <img src="images/Carousel_Placeholder.png" alt="荆州众志足球俱乐部微博二维码" class="img-fluid mb-3" style="max-width: 200px;">
+                        <p class="text-muted">微信扫码关注官方微博</p>
+                        <a href="https://weibo.com" target="_blank" class="btn weibo-btn mt-3">
+                            <i class="fab fa-weibo"></i> 访问微博官网
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 微博功能 -->
+        <section class="mb-8">
+            <h2 class="text-center mb-6">微博特色功能</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="weibo-card p-5 text-center">
+                        <i class="fas fa-broadcast-tower weibo-feature-icon"></i>
+                        <h3 class="mb-3">实时赛事播报</h3>
+                        <p>比赛日实时更新比分、进球瞬间、精彩集锦，让您即使无法到现场也能感受比赛的激情。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="weibo-card p-5 text-center">
+                        <i class="fas fa-user-tie weibo-feature-icon"></i>
+                        <h3 class="mb-3">球员独家采访</h3>
+                        <p>定期发布球员专访、训练日记，让您更深入地了解球员的训练生活和内心想法。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="weibo-card p-5 text-center">
+                        <i class="fas fa-camera weibo-feature-icon"></i>
+                        <h3 class="mb-3">精彩瞬间分享</h3>
+                        <p>分享训练花絮、比赛精彩瞬间、球员生活照，用图片和视频记录俱乐部的每一个精彩时刻。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="weibo-card p-5 text-center">
+                        <i class="fas fa-users weibo-feature-icon"></i>
+                        <h3 class="mb-3">球迷互动活动</h3>
+                        <p>定期举办线上互动活动，包括抽奖、竞猜、问答等，让球迷有机会获得俱乐部周边礼品和比赛门票。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="weibo-card p-5 text-center">
+                        <i class="fas fa-bullhorn weibo-feature-icon"></i>
+                        <h3 class="mb-3">俱乐部最新公告</h3>
+                        <p>发布俱乐部官方公告、转会信息、赛事安排等重要资讯，让您第一时间了解俱乐部的重要动态。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新微博动态 -->
+        <section class="mb-8">
+            <h2 class="text-center mb-6">最新微博动态</h2>
+            <div class="row">
+                <!-- 微博动态卡片 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="weibo-news-card card">
+                        <img src="images/IMG_20240303_105941.jpg" class="card-img-top" alt="比赛瞬间">
+                        <div class="card-body">
+                            <h5 class="card-title">赛季首战告捷！</h5>
+                            <p class="card-text">恭喜球队在新赛季首场比赛中以2:0战胜对手，取得开门红！球队整体表现出色，进攻端配合默契，防守端固若金汤。</p>
+                            <p class="text-muted small">2小时前 · 288转发 · 512评论 · 1314点赞</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 微博动态卡片 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="weibo-news-card card">
+                        <img src="images/IMG_20240303_110030.jpg" class="card-img-top" alt="训练花絮">
+                        <div class="card-body">
+                            <h5 class="card-title">日常训练精彩瞬间</h5>
+                            <p class="card-text">球员们在训练场上挥汗如雨，为即将到来的比赛做着充分准备。看到大家如此努力，相信新赛季一定会取得好成绩！</p>
+                            <p class="text-muted small">昨天 · 156转发 · 324评论 · 897点赞</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 微博动态卡片 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="weibo-news-card card">
+                        <img src="images/IMG_20240303_110045.jpg" class="card-img-top" alt="球员专访">
+                        <div class="card-body">
+                            <h5 class="card-title">球员专访：新赛季目标</h5>
+                            <p class="card-text">队长接受专访时表示，新赛季球队的目标是冲击联赛前三名，并希望能够在杯赛中有所突破。让我们一起为球队加油！</p>
+                            <p class="text-muted small">3天前 · 233转发 · 412评论 · 1125点赞</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://weibo.com" target="_blank" class="btn weibo-btn">
+                    <i class="fab fa-weibo"></i> 查看更多微博内容
+                </a>
+            </div>
+        </section>
+
+        <!-- 微博互动 -->
+        <section class="mb-8">
+            <div class="weibo-card p-6">
+                <h2 class="mb-4 text-center">微博互动方式</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mb-3"><i class="fas fa-comment-alt"></i> 如何与我们互动</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 关注我们的官方微博账号</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 对我们的微博内容进行评论、转发和点赞</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 参与我们举办的线上互动活动</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 使用指定话题标签发布相关内容</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 私信我们提出建议和问题</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mb-3"><i class="fas fa-tags"></i> 常用话题标签</h3>
+                        <div class="tags-container">
+                            <span class="badge badge-primary m-1">#荆州众志足球俱乐部#</span>
+                            <span class="badge badge-primary m-1">#众志足球#</span>
+                            <span class="badge badge-primary m-1">#荆州足球#</span>
+                            <span class="badge badge-primary m-1">#众志加油#</span>
+                            <span class="badge badge-primary m-1">#足球梦想#</span>
+                            <span class="badge badge-primary m-1">#足球训练#</span>
+                            <span class="badge badge-primary m-1">#球迷互动#</span>
+                            <span class="badge badge-primary m-1">#足球赛事#</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-futbol"></i> 荆州众志足球俱乐部</h3>
+                    <p>激情、团队、梦想 - 荆州足球的骄傲</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 湖北省荆州市沙市区</p>
+                    <p><i class="fas fa-phone"></i> 联系电话：0716-xxxxxxx</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：grunt10123@outlook.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="javascript:void(0);" class="btn btn-outline-light btn-sm" onclick="showWechatQRCode()"><i class="fab fa-weixin"></i> 微信公众号</a>
+                        <a href="javascript:void(0);" class="btn btn-outline-light btn-sm" onclick="showWeiboPage()"><i class="fab fa-weibo"></i> 微博</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 荆州众志足球俱乐部. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <!-- 用户认证功能 -->
+    <script src="js/auth.js"></script>
+    <!-- 音乐播放器功能 -->
+    <script src="js/music-player.js"></script>
+    <!-- 微信公众号设置 -->
+    <script src="js/wechat-setup.js"></script>
+    <!-- 微博设置 -->
+    <script src="js/weibo-setup.js"></script>
+    
+    <script>
+        // 初始化页面增强功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待音乐播放器脚本加载完成
+            setTimeout(function() {
+                if (typeof initPageEnhancements === 'function') {
+                    initPageEnhancements();
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

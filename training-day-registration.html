@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球队训练开放日报名 - 荆州众志足球俱乐部官方网站</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <!-- 自定义样式 -->
+    <link href="css/custom-style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* 报名表单特定样式 */
+        .registration-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 30px;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-control {
+            border-radius: 5px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.1);
+        }
+        .form-check {
+            margin-bottom: 20px;
+        }
+        .activity-details {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .activity-details h4 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="首页.html">
+                <img src="images/沙市(1)11_0011(1)(1)(1).png" alt="俱乐部logo"> 荆州众志足球俱乐部
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="首页.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="俱乐部介绍.html">俱乐部介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="赛事新闻.html">赛事新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="球员风采.html">球员风采</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fan-interaction.html">球迷互动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-user"></i> 登录/注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header>
+        <div class="container">
+            <h1>球队训练开放日报名</h1>
+            <p class="lead">走进球队训练基地，近距离感受职业球员的训练生活</p>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="activity-details">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/微信图片_20241211124238.jpg" alt="球队训练开放日" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>球队训练开放日详情</h4>
+                                <p><i class="far fa-calendar-alt"></i> 日期：2024-11-16 09:00</p>
+                                <p><i class="fas fa-map-marker-alt"></i> 地点：荆州众志足球训练基地</p>
+                                <p><i class="fas fa-user"></i> 名额：限100人</p>
+                                <p><i class="fas fa-info-circle"></i> 活动内容：观看球员日常训练、专业教练指导互动、参观训练基地设施</p>
+                                <p><i class="fas fa-exclamation-circle"></i> 注意事项：请穿着舒适运动服装和运动鞋，不要携带专业摄影器材</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="registration-form">
+                        <div class="form-header">
+                            <h2>报名信息</h2>
+                            <p>请填写以下信息完成报名</p>
+                        </div>
+
+                        <form id="trainingRegistrationForm">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="fullName">姓名</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="请输入您的姓名" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="phone">手机号码</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="请输入您的手机号码" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">电子邮箱（选填）</label>
+                                <input type="email" class="form-control" id="email" placeholder="请输入您的电子邮箱">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="age">年龄</label>
+                                <input type="number" class="form-control" id="age" placeholder="请输入您的年龄" min="6" max="65" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="footballExperience">您的足球经验</label>
+                                <select class="form-control" id="footballExperience" required>
+                                    <option value="">请选择</option>
+                                    <option value="beginner">初学者</option>
+                                    <option value="amateur">业余爱好者</option>
+                                    <option value="semiProfessional">半职业</option>
+                                    <option value="coach">教练</option>
+                                    <option value="other">其他</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interests">您对哪方面的训练最感兴趣</label>
+                                <select class="form-control" id="interests">
+                                    <option value="">请选择</option>
+                                    <option value="technical">技术训练</option>
+                                    <option value="tactical">战术训练</option>
+                                    <option value="physical">体能训练</option>
+                                    <option value="goalkeeping">守门员训练</option>
+                                    <option value="all">全部都感兴趣</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="questions">您最想了解的问题（选填）</label>
+                                <textarea class="form-control" id="questions" rows="3" placeholder="请输入您最想了解的关于球队训练的问题"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>是否需要停车位？</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="parking" id="parkingYes" value="yes">
+                                    <label class="form-check-label" for="parkingYes">需要</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="parking" id="parkingNo" value="no" checked>
+                                    <label class="form-check-label" for="parkingNo">不需要</label>
+                                </div>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="agreement" required>
+                                <label class="form-check-label" for="agreement">我已阅读并同意活动参与条款和隐私政策，且了解活动当天需要穿着舒适运动服装和运动鞋</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">提交报名</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-futbol"></i> 荆州众志足球俱乐部</h3>
+                    <p>激情、团队、梦想 - 荆州足球的骄傲</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 湖北省荆州市沙市区</p>
+                    <p><i class="fas fa-phone"></i> 联系电话：0716-xxxxxxx</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：grunt10123@outlook.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-weixin"></i> 微信公众号</a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-weibo"></i> 微博</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 荆州众志足球俱乐部. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <!-- 用户认证功能 -->
+    <script src="js/auth.js"></script>
+    <!-- 音乐播放器功能 -->
+    <script src="js/music-player.js"></script>
+    <!-- 微信公众号设置 -->
+    <script src="js/wechat-setup.js"></script>
+    <!-- 微博设置 -->
+    <script src="js/weibo-setup.js"></script>
+    
+    <script>
+        // 表单提交处理
+        document.getElementById('trainingRegistrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('报名成功！我们将通过短信或邮件与您联系确认。');
+            window.location.href = 'fan-interaction.html';
+        });
+        
+        // 初始化页面增强功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待音乐播放器脚本加载完成
+            setTimeout(function() {
+                if (typeof initPageEnhancements === 'function') {
+                    initPageEnhancements();
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

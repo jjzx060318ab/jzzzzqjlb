@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 荆州众志足球俱乐部官方网站</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <!-- 自定义样式 -->
+    <link href="css/custom-style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="首页.html">
+                <img src="images/沙市(1)11_0011(1)(1)(1).png" alt="俱乐部logo"> 荆州众志足球俱乐部
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="首页.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="俱乐部介绍.html">俱乐部介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="赛事新闻.html">赛事新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="球员风采.html">球员风采</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="user-profile.html">个人中心 <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header>
+        <div class="container">
+            <h1>个人中心</h1>
+            <p class="lead">管理您的个人信息和会员权益</p>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main>
+        <div class="container">
+            <div class="user-profile-container">
+                <div class="row">
+                    <!-- 侧边栏导航 -->
+                    <div class="col-md-3">
+                        <div class="profile-sidebar">
+                            <div class="user-avatar">
+                                <img id="user-avatar" src="images/Carousel_Placeholder.png" alt="用户头像" class="img-fluid rounded-circle">
+                            </div>
+                            <h3 id="user-name" class="text-center mt-3">用户名</h3>
+                            <div class="profile-menu">
+                                <ul>
+                                    <li class="active">
+                                        <a href="#profile-info"><i class="fas fa-user"></i> 个人信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#my-activities"><i class="fas fa-calendar"></i> 我的活动</a>
+                                    </li>
+                                    <li>
+                                        <a href="#favorites"><i class="fas fa-star"></i> 我的收藏</a>
+                                    </li>
+                                    <li>
+                                        <a href="#settings"><i class="fas fa-cog"></i> 账户设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> 退出登录</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 主要内容区 -->
+                    <div class="col-md-9">
+                        <div class="profile-content">
+                            <!-- 个人信息 -->
+                            <section id="profile-info" class="mb-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-user-circle"></i> 个人信息</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="profile-username">用户名</label>
+                                                <input type="text" class="form-control" id="profile-username" value="" disabled>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="profile-email">邮箱</label>
+                                                <input type="email" class="form-control" id="profile-email" value="" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="profile-phone">手机号</label>
+                                                <input type="tel" class="form-control" id="profile-phone" placeholder="请输入手机号">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="profile-gender">性别</label>
+                                                <select class="form-control" id="profile-gender">
+                                                    <option value="male">男</option>
+                                                    <option value="female">女</option>
+                                                    <option value="other">其他</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="profile-bio">个人简介</label>
+                                            <textarea class="form-control" id="profile-bio" rows="3" placeholder="介绍一下自己吧"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary" id="save-profile-btn">保存修改</button>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- 我的活动 -->
+                            <section id="my-activities" class="mb-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-calendar-alt"></i> 我的活动</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="activities-list">
+                                            <!-- 活动列表将通过JavaScript动态生成 -->
+                                            <p class="text-center text-muted">暂无活动记录</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- 我的收藏 -->
+                            <section id="favorites" class="mb-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-star"></i> 我的收藏</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="favorites-list">
+                                            <!-- 收藏列表将通过JavaScript动态生成 -->
+                                            <p class="text-center text-muted">暂无收藏内容</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <!-- 账户设置 -->
+                            <section id="settings" class="mb-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-cog"></i> 账户设置</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- 修改密码 -->
+                                        <div class="mb-5">
+                                            <h3 class="mb-3">修改密码</h3>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="current-password">当前密码</label>
+                                                    <input type="password" class="form-control" id="current-password" placeholder="请输入当前密码">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="new-password">新密码</label>
+                                                    <input type="password" class="form-control" id="new-password" placeholder="请输入新密码">
+                                                    <small class="form-text text-muted">密码长度至少6位，包含字母和数字</small>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="confirm-password">确认新密码</label>
+                                                    <input type="password" class="form-control" id="confirm-password" placeholder="请再次输入新密码">
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary" id="change-password-btn">修改密码</button>
+                                        </div>
+                                        
+                                        <!-- 账户安全 -->
+                                        <div class="mb-5">
+                                            <h3 class="mb-3">账户安全</h3>
+                                            <div class="form-group">
+                                                <label>登录保护</label>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="login-protection">
+                                                    <label class="form-check-label" for="login-protection">启用登录保护（异地登录需要验证）</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>登录历史</label>
+                                                <button class="btn btn-secondary" id="view-login-history">查看登录历史</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 通知设置 -->
+                                        <div class="mb-5">
+                                            <h3 class="mb-3">通知设置</h3>
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="match-notifications">
+                                                    <label class="form-check-label" for="match-notifications">赛事提醒</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="news-notifications">
+                                                    <label class="form-check-label" for="news-notifications">最新资讯</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="activity-notifications">
+                                                    <label class="form-check-label" for="activity-notifications">活动通知</label>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary" id="save-notification-settings">保存设置</button>
+                                        </div>
+                                        
+                                        <!-- 账户管理 -->
+                                        <div class="mb-5">
+                                            <h3 class="mb-3">账户管理</h3>
+                                            <button class="btn btn-danger" id="delete-account-btn">删除账户</button>
+                                            <small class="form-text text-muted">删除账户将无法恢复，请谨慎操作！</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-futbol"></i> 荆州众志足球俱乐部</h3>
+                    <p>激情、团队、梦想 - 荆州足球的骄傲</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 湖北省荆州市沙市区</p>
+                    <p><i class="fas fa-phone"></i> 联系电话：0716-xxxxxxx</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：grunt10123@outlook.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-weixin"></i> 微信公众号</a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-weibo"></i> 微博</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 荆州众志足球俱乐部. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <!-- 微信公众号设置 -->
+    <script src="js/wechat-setup.js"></script>
+    <!-- 微博设置 -->
+    <script src="js/weibo-setup.js"></script>
+    
+    <script>
+        // 页面加载时检查登录状态
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+            initProfilePage();
+        });
+        
+        // 检查登录状态
+        function checkLoginStatus() {
+            const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+            
+            if (!isLoggedIn) {
+                // 如果未登录，跳转到登录页面
+                alert('请先登录');
+                window.location.href = 'login.html';
+            }
+        }
+        
+        // 初始化个人中心页面
+        function initProfilePage() {
+            const username = localStorage.getItem('username') || '用户名';
+            
+            // 设置用户名显示
+            document.getElementById('user-name').textContent = username;
+            document.getElementById('profile-username').value = username;
+            
+            // 加载用户保存的个人信息
+            loadUserProfile();
+            
+            // 初始化账户设置
+            initAccountSettings();
+            
+            // 点击侧边栏菜单的切换效果
+            const menuItems = document.querySelectorAll('.profile-menu li a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        
+                        // 移除所有活动状态
+                        document.querySelectorAll('.profile-menu li').forEach(li => {
+                            li.classList.remove('active');
+                        });
+                        
+                        // 添加当前活动状态
+                        this.parentElement.classList.add('active');
+                        
+                        // 滚动到对应的部分
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        
+                        // 添加平滑滚动效果，并调整滚动位置以避免被导航栏遮挡
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 更新URL参数，不刷新页面
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+            
+            // 检查URL中的锚点参数，如果有则跳转到对应部分
+            checkUrlHash();
+            
+            // 添加滚动监听，自动更新侧边栏的活动状态
+            addScrollListener();
+            
+            // 处理浏览器前进后退按钮
+            window.addEventListener('popstate', checkUrlHash);
+            
+            // 初始化移动端适配
+            initMobileAdaptation();
+            
+            // 退出登录
+            document.getElementById('logout-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (confirm('确定要退出登录吗？')) {
+                    localStorage.removeItem('loggedIn');
+                    localStorage.removeItem('username');
+                    localStorage.removeItem('userProfile');
+                    localStorage.removeItem('userSettings');
+                    window.location.href = 'login.html';
+                }
+            });
+            
+            // 保存个人信息
+            document.getElementById('save-profile-btn').addEventListener('click', saveUserProfile);
+        }
+        
+        // 检查URL中的锚点参数
+        function checkUrlHash() {
+            const hash = window.location.hash;
+            
+            if (hash && document.querySelector(hash)) {
+                // 移除所有活动状态
+                document.querySelectorAll('.profile-menu li').forEach(li => {
+                    li.classList.remove('active');
+                });
+                
+                // 为对应的菜单项添加活动状态
+                const menuLink = document.querySelector(`.profile-menu li a[href="${hash}"]`);
+                if (menuLink) {
+                    menuLink.parentElement.classList.add('active');
+                }
+                
+                // 滚动到对应部分
+                const targetElement = document.querySelector(hash);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // 添加滚动监听，自动更新侧边栏的活动状态
+        function addScrollListener() {
+            const sections = document.querySelectorAll('section');
+            const menuItems = document.querySelectorAll('.profile-menu li a');
+            
+            window.addEventListener('scroll', function() {
+                let currentSection = '';
+                
+                // 确定当前滚动位置对应的部分
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop && 
+                        window.pageYOffset < sectionTop + sectionHeight) {
+                        currentSection = '#' + section.getAttribute('id');
+                    }
+                });
+                
+                // 更新侧边栏菜单项的活动状态
+                menuItems.forEach(item => {
+                    item.parentElement.classList.remove('active');
+                    
+                    if (item.getAttribute('href') === currentSection) {
+                        item.parentElement.classList.add('active');
+                        
+                        // 更新URL，但不触发滚动
+                        if (window.location.hash !== currentSection) {
+                            history.replaceState(null, null, currentSection);
+                        }
+                    }
+                });
+            });
+        }
+        
+        // 移动端适配：添加侧边栏折叠功能
+        function initMobileAdaptation() {
+            const profileSidebar = document.querySelector('.profile-sidebar');
+            const profileContent = document.querySelector('.profile-content');
+            
+            // 检测屏幕宽度，小于768px时启用移动端适配
+            function checkScreenSize() {
+                if (window.innerWidth < 768) {
+                    // 在移动端默认隐藏侧边栏
+                    profileSidebar.classList.add('mobile-hidden');
+                    
+                    // 添加返回按钮到内容区域
+                    if (!document.querySelector('.back-to-menu')) {
+                        const backButton = document.createElement('button');
+                        backButton.className = 'btn btn-secondary mb-3 back-to-menu';
+                        backButton.innerHTML = '<i class="fas fa-bars"></i> 菜单';
+                        
+                        // 插入到内容区域的顶部
+                        if (profileContent.firstChild) {
+                            profileContent.insertBefore(backButton, profileContent.firstChild);
+                        } else {
+                            profileContent.appendChild(backButton);
+                        }
+                        
+                        // 点击返回按钮显示侧边栏
+                        backButton.addEventListener('click', function() {
+                            profileSidebar.classList.remove('mobile-hidden');
+                            profileContent.classList.add('mobile-hidden');
+                        });
+                    }
+                    
+                    // 为每个菜单项添加点击后隐藏侧边栏的功能
+                    document.querySelectorAll('.profile-menu li a').forEach(item => {
+                        if (item.getAttribute('href') !== '#') {
+                            item.addEventListener('click', function() {
+                                setTimeout(() => {
+                                    profileSidebar.classList.add('mobile-hidden');
+                                    profileContent.classList.remove('mobile-hidden');
+                                }, 500);
+                            });
+                        }
+                    });
+                } else {
+                    // 在桌面端显示所有内容
+                    profileSidebar.classList.remove('mobile-hidden');
+                    profileContent.classList.remove('mobile-hidden');
+                    
+                    // 移除返回按钮
+                    const backButton = document.querySelector('.back-to-menu');
+                    if (backButton) {
+                        backButton.remove();
+                    }
+                }
+            }
+            
+            // 初始检查屏幕大小
+            checkScreenSize();
+            
+            // 添加窗口大小改变时的监听
+            window.addEventListener('resize', checkScreenSize);
+        }
+        
+        // 加载用户个人信息
+        function loadUserProfile() {
+            // 尝试从localStorage加载用户信息
+            const userProfile = localStorage.getItem('userProfile');
+            
+            if (userProfile) {
+                try {
+                    const profileData = JSON.parse(userProfile);
+                    
+                    // 设置表单值
+                    document.getElementById('profile-email').value = profileData.email || '';
+                    document.getElementById('profile-phone').value = profileData.phone || '';
+                    document.getElementById('profile-gender').value = profileData.gender || 'male';
+                    document.getElementById('profile-bio').value = profileData.bio || '';
+                    
+                    // 设置头像（如果有）
+                    if (profileData.avatar) {
+                        document.getElementById('user-avatar').src = profileData.avatar;
+                    }
+                } catch (e) {
+                    console.error('加载用户信息失败:', e);
+                }
+            }
+        }
+        
+        // 保存用户个人信息
+        function saveUserProfile() {
+            const profileData = {
+                username: localStorage.getItem('username'),
+                email: document.getElementById('profile-email').value,
+                phone: document.getElementById('profile-phone').value,
+                gender: document.getElementById('profile-gender').value,
+                bio: document.getElementById('profile-bio').value,
+                avatar: document.getElementById('user-avatar').src
+            };
+            
+            // 保存到localStorage
+            localStorage.setItem('userProfile', JSON.stringify(profileData));
+            
+            // 显示保存成功提示
+            alert('个人信息保存成功');
+        }
+        
+        // 初始化账户设置
+        function initAccountSettings() {
+            // 加载用户设置
+            loadUserSettings();
+            
+            // 修改密码事件监听
+            document.getElementById('change-password-btn').addEventListener('click', changePassword);
+            
+            // 保存通知设置事件监听
+            document.getElementById('save-notification-settings').addEventListener('click', saveNotificationSettings);
+            
+            // 查看登录历史事件监听
+            document.getElementById('view-login-history').addEventListener('click', viewLoginHistory);
+            
+            // 删除账户事件监听
+            document.getElementById('delete-account-btn').addEventListener('click', deleteAccount);
+        }
+        
+        // 加载用户设置
+        function loadUserSettings() {
+            // 尝试从localStorage加载用户设置
+            const userSettings = localStorage.getItem('userSettings');
+            
+            if (userSettings) {
+                try {
+                    const settingsData = JSON.parse(userSettings);
+                    
+                    // 设置通知开关状态
+                    document.getElementById('match-notifications').checked = settingsData.matchNotifications || false;
+                    document.getElementById('news-notifications').checked = settingsData.newsNotifications || false;
+                    document.getElementById('activity-notifications').checked = settingsData.activityNotifications || false;
+                    
+                    // 设置登录保护状态
+                    document.getElementById('login-protection').checked = settingsData.loginProtection || false;
+                } catch (e) {
+                    console.error('加载用户设置失败:', e);
+                }
+            }
+        }
+        
+        // 修改密码
+        function changePassword() {
+            const currentPassword = document.getElementById('current-password').value;
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            // 表单验证
+            if (!currentPassword || !newPassword || !confirmPassword) {
+                alert('请填写完整的密码信息');
+                return;
+            }
+            
+            // 在实际应用中，这里应该发送到服务器验证当前密码
+            // 这里我们简单模拟验证通过
+            
+            if (newPassword.length < 6 || !/[A-Za-z]/.test(newPassword) || !/\d/.test(newPassword)) {
+                alert('新密码长度至少6位，必须包含字母和数字');
+                return;
+            }
+            
+            if (newPassword !== confirmPassword) {
+                alert('两次输入的新密码不一致');
+                return;
+            }
+            
+            // 在实际应用中，这里应该发送新密码到服务器进行修改
+            // 这里我们简单模拟修改成功
+            alert('密码修改成功！请重新登录');
+            
+            // 清空密码输入框
+            document.getElementById('current-password').value = '';
+            document.getElementById('new-password').value = '';
+            document.getElementById('confirm-password').value = '';
+            
+            // 在实际应用中，应该强制用户重新登录
+        }
+        
+        // 保存通知设置
+        function saveNotificationSettings() {
+            const settingsData = {
+                matchNotifications: document.getElementById('match-notifications').checked,
+                newsNotifications: document.getElementById('news-notifications').checked,
+                activityNotifications: document.getElementById('activity-notifications').checked,
+                loginProtection: document.getElementById('login-protection').checked
+            };
+            
+            // 保存到localStorage
+            localStorage.setItem('userSettings', JSON.stringify(settingsData));
+            
+            // 显示保存成功提示
+            alert('通知设置保存成功');
+        }
+        
+        // 查看登录历史
+        function viewLoginHistory() {
+            // 在实际应用中，这里应该从服务器获取登录历史
+            // 这里我们简单模拟显示登录历史
+            const mockLoginHistory = [
+                { time: '2024-03-15 14:30', device: 'Chrome浏览器', location: '湖北省荆州市' },
+                { time: '2024-03-14 09:15', device: '移动设备', location: '湖北省荆州市' },
+                { time: '2024-03-10 19:45', device: 'Firefox浏览器', location: '湖北省荆州市' }
+            ];
+            
+            let historyHTML = '<table class="table table-hover"><thead><tr><th>登录时间</th><th>设备</th><th>登录地点</th></tr></thead><tbody>';
+            
+            mockLoginHistory.forEach(item => {
+                historyHTML += `<tr><td>${item.time}</td><td>${item.device}</td><td>${item.location}</td></tr>`;
+            });
+            
+            historyHTML += '</tbody></table>';
+            
+            // 显示登录历史弹窗
+            if (confirm('查看最近登录历史？')) {
+                const historyWindow = window.open('', '_blank', 'width=800,height=600');
+                historyWindow.document.write(`
+                    <html><head><title>登录历史</title><link href="css/bootstrap-4.4.1.css" rel="stylesheet"></head>
+                    <body><div class="container mt-5"><h2>登录历史</h2>${historyHTML}</div></body></html>
+                `);
+                historyWindow.document.close();
+            }
+        }
+        
+        // 删除账户
+        function deleteAccount() {
+            if (confirm('确定要删除账户吗？此操作不可恢复，所有数据将被永久删除！')) {
+                if (confirm('再次确认要删除账户？')) {
+                    // 在实际应用中，这里应该发送请求到服务器删除账户
+                    // 这里我们简单模拟删除成功
+                    alert('账户已删除');
+                    
+                    // 清除localStorage中的用户数据
+                    localStorage.removeItem('loggedIn');
+                    localStorage.removeItem('username');
+                    localStorage.removeItem('userProfile');
+                    localStorage.removeItem('userSettings');
+                    
+                    // 跳转到登录页面
+                    window.location.href = 'login.html';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

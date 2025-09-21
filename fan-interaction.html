@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球迷互动 - 荆州众志足球俱乐部官方网站</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <!-- 自定义样式 -->
+    <link href="css/custom-style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* 互动页面特定样式 */
+        .interaction-form {
+            margin-bottom: 40px;
+        }
+        .comment-card {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .comment-card:hover {
+            transform: translateY(-5px);
+        }
+        .comment-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .comment-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .vote-option {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .vote-option:hover {
+            background-color: #f8f9fa;
+        }
+        .vote-count {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .activity-card {
+            transition: all 0.3s ease;
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="首页.html">
+                <img src="images/沙市(1)11_0011(1)(1)(1).png" alt="俱乐部logo"> 荆州众志足球俱乐部
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="首页.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="俱乐部介绍.html">俱乐部介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="赛事新闻.html">赛事新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="球员风采.html">球员风采</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-user"></i> 登录/注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header>
+        <div class="container">
+            <h1>球迷互动</h1>
+            <p class="lead">与荆州众志足球俱乐部一起分享激情，参与互动</p>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main>
+        <div class="container">
+            <!-- 互动留言板 -->
+            <section class="mt-5">
+                <h2 class="section-title">球迷留言板</h2>
+                <div class="card interaction-form">
+                    <div class="card-body">
+                        <h3>留下您的留言</h3>
+                        <form id="commentForm">
+                            <div class="form-group">
+                                <label for="commentName">您的昵称</label>
+                                <input type="text" class="form-control" id="commentName" placeholder="请输入您的昵称" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="commentContent">留言内容</label>
+                                <textarea class="form-control" id="commentContent" rows="4" placeholder="分享您对球队的支持和建议..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">提交留言</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 留言列表 -->
+                <div class="comment-list">
+                    <div class="card comment-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="comment-avatar">
+                                        <img src="https://via.placeholder.com/150" alt="用户头像">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title">足球爱好者</h4>
+                                    <p class="card-text">球队最近的表现太棒了！希望能够保持这样的状态，争取在联赛中取得更好的成绩。加油，荆州众志！</p>
+                                    <p class="text-muted text-sm">2024-10-15 14:30 <span class="ml-3"><i class="far fa-thumbs-up"></i> 28</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card comment-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="comment-avatar">
+                                        <img src="https://via.placeholder.com/150" alt="用户头像">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title">荆州球迷</h4>
+                                    <p class="card-text">作为一名忠实的荆州球迷，我每场比赛都会关注球队的表现。希望俱乐部能够多组织一些球迷见面活动，让我们有机会近距离接触球员。</p>
+                                    <p class="text-muted text-sm">2024-10-14 10:15 <span class="ml-3"><i class="far fa-thumbs-up"></i> 15</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card comment-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="comment-avatar">
+                                        <img src="https://via.placeholder.com/150" alt="用户头像">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title">少年足球梦</h4>
+                                    <p class="card-text">我是一名12岁的足球爱好者，梦想有一天能够加入荆州众志足球俱乐部。请问俱乐部有青少年训练营吗？如何报名参加？</p>
+                                    <p class="text-muted text-sm">2024-10-12 16:45 <span class="ml-3"><i class="far fa-thumbs-up"></i> 32</span></p>
+                                    <div class="card mt-3 bg-light">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>官方回复：</strong>感谢您对荆州众志足球俱乐部的关注和支持！我们确实有青少年足球训练营，目前正在招募新学员。您可以通过俱乐部官方网站或微信公众号了解详细的报名信息。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- 球迷投票 -->
+            
+
+           
+
+            <!-- 活动报名 -->
+            <section class="mt-5">
+                <h2 class="section-title">球迷活动</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card activity-card">
+                            <img class="card-img-top" src="images/微信图片_20241211124441.jpg" alt="球迷见面会">
+                            <div class="card-body">
+                                <h3 class="card-title">球员见面会</h3>
+                                <p class="card-text">与荆州众志足球队员近距离接触，获取签名、合影留念，还有机会参与互动游戏赢取精美纪念品！</p>
+                                <p class="text-muted"><i class="far fa-calendar-alt"></i> 2024-11-10 14:00<br>
+                                <i class="fas fa-map-marker-alt"></i> 荆州市体育中心</p>
+                                <a href="player-meeting-registration.html" class="btn btn-primary w-100 mt-2">我要报名</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card activity-card">
+                            <img class="card-img-top" src="images/微信图片_20241211124238.jpg" alt="球迷开放日">
+                            <div class="card-body">
+                                <h3 class="card-title">球队训练开放日</h3>
+                                <p class="card-text">走进球队训练基地，观看球员日常训练，了解职业球员的训练生活，还有专业教练指导互动环节！</p>
+                                <p class="text-muted"><i class="far fa-calendar-alt"></i> 2024-11-16 09:00<br>
+                                <i class="fas fa-map-marker-alt"></i> 荆州众志足球训练基地</p>
+                                <a href="training-day-registration.html" class="btn btn-primary w-100 mt-2">我要报名</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- 球迷分享 -->
+            <section class="mt-5">
+                <h2 class="section-title">球迷风采展示</h2>
+                <div class="img-gallery">
+                    <div class="img-item">
+                        <img src="images/微信图片_20241211124452.jpg" alt="球迷风采1">
+                    </div>
+                    <div class="img-item">
+                        <img src="images/微信图片_20241211124525.jpg" alt="球迷风采2">
+                    </div>
+                    <div class="img-item">
+                        <img src="images/微信图片_20241211124535.jpg" alt="球迷风采3">
+                    </div>
+                    <div class="img-item">
+                        <img src="images/微信图片_20241211124548.jpg" alt="球迷风采4">
+                    </div>
+                    <div class="img-item">
+                        <img src="images/微信图片_20241211124558.jpg" alt="球迷风采5">
+                    </div>
+                    <div class="img-item">
+                        <img src="images/微信图片_20241211124612.jpg" alt="球迷风采6">
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary">上传我的球迷风采</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-futbol"></i> 荆州众志足球俱乐部</h3>
+                    <p>激情、团队、梦想 - 荆州足球的骄傲</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 湖北省荆州市沙市区</p>
+                    <p><i class="fas fa-phone"></i> 联系电话：0716-xxxxxxx</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：grunt10123@outlook.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-weixin"></i> 微信公众号</a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-weibo"></i> 微博</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 荆州众志足球俱乐部. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <!-- 用户认证功能 -->
+    <script src="js/auth.js"></script>
+    <!-- 音乐播放器功能 -->
+    <script src="js/music-player.js"></script>
+    <!-- 微信公众号设置 -->
+    <script src="js/wechat-setup.js"></script>
+    <!-- 微博设置 -->
+    <script src="js/weibo-setup.js"></script>
+    
+    <script>
+        // 表单提交处理
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！我们会尽快审核并展示您的评论。');
+            this.reset();
+        });
+        
+        // 初始化页面增强功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待音乐播放器脚本加载完成
+            setTimeout(function() {
+                if (typeof initPageEnhancements === 'function') {
+                    initPageEnhancements();
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
